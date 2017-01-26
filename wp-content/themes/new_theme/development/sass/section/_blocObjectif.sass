@@ -1,11 +1,15 @@
 #objectifs
   background-color: #FBF9F4
-  padding: 130px 0 100px 0
+  padding: 130px 30px 100px 30px
 
 .block_objectif,
 .block_chiffre
-  width: 730px
+  width: 100%
   margin: auto
+  +medium
+    width: 70%
+    +large
+      width: 50%
 
 .block_objectif
   .description_content
@@ -25,8 +29,10 @@
   margin: 0 0 30px 0
 
 .title_chiffre
-  font-size: 80px
+  font-size: 50px
   color: #278589
+  +medium
+    font-size: 80px
 
 .description_chiffre
   font-size: 17px
