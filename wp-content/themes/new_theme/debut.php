@@ -1,7 +1,29 @@
 
-<div id="home">
-    <img src="" alt="">
-</div>
+<section id="home">
+  <div class="background">
+      <div class="paysage" >
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/00-paysage.png" alt="">
+      </div>
+      <div class="marche" >
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/01-marche.png" alt="">
+      </div>
+      <div class="eau-sale">
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/eausale.png" alt="">
+      </div>
+      <div class="marche2">
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/02-marche.png" alt="">
+      </div>
+      <div class="instalateur">
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/installation.png" alt="">
+      </div>
+      <div class="association">
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/association.png" alt="">
+      </div>
+      <div class="fin">
+          <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/fin.png" alt="">
+      </div>
+  </div>
+</section>
 
 <section id="participation_don" class='brown'>
     <section class="welcome">
@@ -105,5 +127,3 @@
 
     </div>
 </section>
-
-
