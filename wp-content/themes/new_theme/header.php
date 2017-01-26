@@ -16,16 +16,17 @@
     <!-- vendor script css -->
 </head>
 <body>
-    <header class='nav-down'>
-        <div class='contener-head'>
-            <a href='<?php bloginfo('url'); ?>' class='logo'></a>
-            <div class='menu'>
+
+<div id="header-wrap">
+    <div id="header" class="clear">
+        <nav>
+            <img src="<?= get_stylesheet_directory_uri(); ?>/images/logo_ALEM.png" alt="" class="logo">
                 <?php wp_nav_menu(array(
                     'theme_location' => 'nav'
                 )); ?>
-            </div>
-        </div>
-    </header>
+        </nav>
+    </div>
+</div>
     <div class='cb'></div>
             <div class='wrap'>
                 <div class='container'>
