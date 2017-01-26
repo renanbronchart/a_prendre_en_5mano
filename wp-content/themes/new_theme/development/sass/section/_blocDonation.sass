@@ -1,14 +1,14 @@
 #participation_don
-  background: linear-gradient(180deg, #FBF9F4 50%, #69B1E1 50%)
   position: relative
+  overflow: hidden
   padding: 130px 0
 
 .block_don
   width: 100%
   margin: 0 auto
+  position: relative
   background-color: #fff
   padding: 45px
-  overflow: hidden
   +medium
     width: 70%
     padding: 45px
@@ -17,3 +17,59 @@
 
   .description_content
     padding: 0 50px
+
+.welcome
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 100%
+  overflow: hidden // iOS Safari fix
+  margin: 0 0 -300px 0
+  &.on
+    animation: upWave 6s ease-in-out 1s
+    animation-fill-mode: forwards
+.thanks
+  z-index: 1
+
+.wave
+  background: url('images/wave2.svg')
+  background-repeat: repeat-x
+  position: absolute
+  top: -175px
+  width: 4592px
+  height: 180px
+  animation: wave 5s cubic-bezier(0.35, 0.45, 0.65, 0.10) infinite
+  -webkit-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+  z-index: 0
+
+.ocean
+  background: #69b1e1
+  display: inline-block
+  height: 300px
+  width: 100%
+  position: absolute
+  z-index: 0
+  bottom: 0
+  left: 0
+  z-index: 0
+
+@keyframes wave
+  0%
+    margin-left: 0
+
+  100%
+    margin-left: -2296px
+
+@keyframes upWave
+  0%
+    transform: translate3d(0, 0, 0)
+  40%
+    transform: translate3d(0, -220px, 0)
+  80%
+    transform: translate3d(0, -200px, 0)
+  100%
+    transform: translate3d(0, -300px, 0)
+
+
+

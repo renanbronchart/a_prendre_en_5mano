@@ -118,11 +118,11 @@ function create_chiffre_content() {
 add_action( 'init', 'create_team_member' );
 
 function create_team_member() {
-    register_post_type( 'Equipe',
+    register_post_type( 'team_member',
         array(
             'labels' => array(
-                'name' => __( 'Equipe' ),
-                'singular_name' => __( 'Name' ),
+                'name' => __( 'team_member' ),
+                'singular_name' => __( 'team_member' ),
                 'set_featured_image' => true
             ),
             'public' => true,

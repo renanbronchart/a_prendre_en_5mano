@@ -3,9 +3,13 @@
     <img src="" alt="">
 </div>
 
-<section id="participation_don">
+<section id="participation_don" class='brown'>
+    <section class="welcome">
+      <div class="ocean">
+        <div class="wave"></div>
+      </div>
+    </section>
     <div class="block_don">
-
         <?php
         $loopContexte = new WP_Query( array( 'post_type' => 'contexte', 'posts_per_page' => 10 ) );
         while ( $loopContexte->have_posts() ) : $loopContexte->the_post();
