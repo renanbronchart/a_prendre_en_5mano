@@ -1,0 +1,92 @@
+.team
+.team__members
+  width: auto
+  overflow-x: auto
+  white-space: nowrap
+  padding: 20px 100px 40px 100px
+  .team__member
+    width: 300px
+    display: inline-block
+    vertical-align: top
+    padding: 20px 0
+    & + .team__member
+      margin: 0 0 0 50px
+  .team__details
+    white-space: normal
+
+  .team__memberPhoto
+    img
+      width: 100%
+      max-width: 100%
+      height: auto
+
+  .team__memberName
+    color: #fff
+
+  .team__memberName,
+  .team__memberDescription
+    margin: 20px 0 0 0
+
+
+  // .listActus__title
+  //   color: $color-text-blue
+
+  // .listActus__title,
+  // .listActus__link,
+  // .listActus__content
+  //   margin: 20px 0 0 0
+
+  // .listActus__content
+  //   white-space: normal
+
+  // .listActus__details
+  //   max-width: 300px
+  //   p
+  //     font-size: 1rem
+
+  // .listActus__link
+  //   display: inline-block
+  +medium
+    width: 100%
+    overflow: auto
+    white-space: normal
+    padding: 0
+    .team__member
+      width: 33%
+      position: relative
+      vertical-align: top
+      padding: 0
+      & + .team__member
+        margin: 0
+      &:hover
+        .team__details
+          opacity: 1
+          transition: opacity 0.4s ease-in-out
+
+
+    .team__memberPhoto
+      img
+        width: 100%
+        max-width: 100%
+        height: auto
+
+    .team__details
+      width: 100%
+      opacity: 0
+      transition: opacity 0.5s ease-in-out
+      position: absolute
+      background-color: rgba($color-text-blue, 0.9)
+      color: #ffffff
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      padding: 20px
+
+    .team__memberDescription
+      position: absolute
+      bottom: 0
+      right: 0
+      padding: 20px
+      p
+        color: #ffffff

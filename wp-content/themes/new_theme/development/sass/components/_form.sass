@@ -1,0 +1,59 @@
+.contactForm
+  .container
+    width: 90%
+    margin: auto
+    +medium
+      width: 80%
+    +large
+      width: 60%
+  .contactForm__content
+    margin: 40px 0 0 0
+    padding: 0 20px
+    +medium
+      padding: 0 40px
+    +large
+      padding: 0 80px
+
+
+  #hugeit-contact-wrapper_1
+    background: 0
+  #hugeit-contact-wrapper_1 .hugeit-contact-column-block
+    float: none !important
+  #hugeit-contact-wrapper_1
+    width: 100%
+    .field-block input,
+    .field-block input:focus,
+    .field-block textarea,
+    .field-block textarea:focus,
+      width: 100%
+      height: auto
+      border: none !important
+      border-bottom: 1px solid #DDDDDD !important
+      background: 0
+      font-size: 1rem
+      color: #646D6E !important
+      padding: 0 0 10px 0 !important
+      outline:0px !important
+      -webkit-appearance:none
+  #hugeit-contact-wrapper_1
+    .hugeit-field-block
+      margin: 0 0 30px 0
+      label
+        color: #BDBDBD
+      &:nth-child(1),
+      &:nth-child(2)
+        width: 49%
+        display: inline-block
+    .field-block.input-text-block,
+    .field-block.textarea-block
+      width: 100% !important
+      padding: 0 40px 0 0
+    .captcha-block,
+    .buttons-block
+      text-align: center
+    .buttons-block button.submit,
+    .buttons-block button.submit:hover
+      @extend .button
+      letter-spacing: normal
+      i
+        display: none

@@ -1,0 +1,62 @@
+.actusContainer
+  .listActus
+    width: auto
+    overflow-x: auto
+    white-space: nowrap
+    padding: 0 100px 40px 100px
+    li
+      width: 300px
+      display: inline-block
+      vertical-align: top
+      padding: 20px 0
+      & + li
+        margin: 0 0 0 50px
+  .listActus__media
+    +center-image-vertical(200px)
+    max-width: 300px
+
+
+  .listActus__title
+    color: $color-text-blue
+
+  .listActus__title,
+  .listActus__link,
+  .listActus__content,
+  .listActus__details
+    margin: 20px 0 0 0
+
+  .listActus__content
+    white-space: normal
+
+  .listActus__details
+    max-width: 300px
+    p
+      font-size: 1rem
+
+  .listActus__link,
+  .listActus__link:visited,
+  .listActus__link:focus
+    display: inline-block
+    text-decoration: none
+    color: $color-text-blue
+    padding: 0 0 5px 0
+    border-bottom: 1px solid $color-text-blue
+
+
+  .actusContainer__element
+    width: 100%
+    margin: 40px auto
+  .listActus__element
+    width: 100%
+    margin: auto
+    padding: 0 20px
+    +medium
+      width: 80%
+    +large
+      width: 50%
+  .listActus__media
+    margin: auto
+  .listActus__details
+    max-width: 100%
+
+

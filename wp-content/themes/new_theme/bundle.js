@@ -1,0 +1,1 @@
+var mediaQueries=mediaQueries||{};!function(i){var e=function(){"matchMedia"in window&&(window.matchMedia("(min-width:768px)").matches?i.device="desktop":i.device="mobile")},n=function(){console.log("init"),e(),$(window).on("resize",function(){e()}),$(document).on("ready",function(){})};n()}(mediaQueries);

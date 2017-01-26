@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=greek,latin-ext');
+
+.share-button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.share-button .share-button-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    padding-top: 50px;
+}
+
+
+.share-button .share-button-block .licens {
+    width: 324px;
+    height: 115px;
+    background-color: #fa4800;
+    border-radius: 3px;
+    background-image: url(../images/sprite_licensing.png);
+    background-position: -161px -78px;
+    position: relative;
+    margin: 0 7px;
+    margin-bottom: 14px;
+}
+
+.share-button .share-button-block .licens a {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.share-button .share-button-block .licens:hover {
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
+}
+
+.share-button .share-button-block .licens .icon {
+    background-image: url(../images/sprite_licensing.png);
+}
+
+.share-button .share-button-block .licens .text {
+    color: #fff;
+    font-size: 19px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+.share-button .share-button-block .licens .button {
+    width: 44px;
+    height: 54px;
+    background-position: -16px -256px;
+    margin-top: 15px;
+}
+
+.share-button .share-button-block .licens .count {
+    width: 57px;
+    height: 57px;
+    background-position: -109px -256px;
+    margin-top: 12px;
+}
+
+.share-button .share-button-block .licens .custom {
+    width: 63px;
+    height: 61px;
+    background-position: -217px -253px;
+    margin-top: 11px;
+}
+
+.share-button .share-button-block .licens .title {
+    width: 57px;
+    height: 57px;
+    background-position: -313px -253px;
+    margin-top: 12px;
+}
+
+.share-button .share-button-block .licens .block {
+    width: 57px;
+    height: 56px;
+    margin-top: 13px;
+    background-position: -412px -255px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
