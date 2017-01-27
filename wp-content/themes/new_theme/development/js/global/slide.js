@@ -1,15 +1,16 @@
 var body = document.body,
       boxElement = document.querySelector('.good'),
-      mainContainer = document.querySelector('html'),
+      mainContainer = document.querySelector('.background'),
       back2 = document.querySelector('.last2'),
       images = document.querySelector('.background').children ,
       textchildren = [],
       imageschildren = [],
+      imageNumber = 0,
       Left,
       Right,
       scroll = 0;
 
-      function makeImg() // cree un tableau contenant les texts
+      function makeText() // cree un tableau contenant les texts
       {
           for (var i = 0; i < images.length; i++)
           {
@@ -20,7 +21,31 @@ var body = document.body,
           };
           return false
       }
+
+      function makeImg() // cree un tableau contenant les texts
+      {
+          for (var i = 0; i < images.length; i++)
+          {
+            if(images[i].attributes[0].name == 'class') imageNumber = i;
+              imageschildren[i] =
+              {
+                  element : images[i]
+              }
+          };
+          return imageschildren;
+      }
       makeImg();
+
+      function makeText() // cree un tableau contenant les texts
+      {
+          for (var i = 0; i < images.length; i++)
+          {
+            if(images[i].attributes[0].name == 'data-position') textchildren[i - (imageNumber + 1)] = {element: images[i]}
+          };
+          return textchildren;
+      }
+      makeText();
+
 
       function handle( event )
       {
@@ -29,19 +54,26 @@ var body = document.body,
       };
       function Onscroll( e )
       {
-          Left = body.scrollLeft, // the position of the scrollLeft
-          Right = body.scrollLeft + body.clientWidth; // the position of the scrollRight
-          bodyWidth = body.scrollWidth;
-          if( e.deltaY ){ // verify if we scroll top to bottom and not left to right ;
-              if( e.deltaY > 0)// scroll right
-              {
-                  if( Right >= bodyWidth ) return; // if you get to the end of the scroll no more action
-              };
-              if( e.deltaY < 0) // scroll left
-              {
-                  if( Left <= 0) return; // if you get to the end of the scroll no more action
-              };
-          }
+        var scrollPos = mainContainer.scrollLeft; // the position of the scrollLeft
+        if( 200 < scrollPos ){
+          textchildren[0].element.classList.add('show')
+         }
+        if( 1500 < scrollPos ){
+           console.log('hello');
+           textchildren[1].element.classList.add('show')
+         }
+        if( 3000 < scrollPos ){
+          console.log('hello');
+          textchildren[2].element.classList.add('show')
+        }
+        if( 5000 < scrollPos ){
+         console.log('hello');
+         textchildren[3].element.classList.add('show')
+        }
+        if( 6000 < scrollPos ){
+          console.log('hello');
+          textchildren[4].element.classList.add('show')
+        }
           return false;
       };
       function mouseposition(event){
@@ -60,6 +92,6 @@ var body = document.body,
           "transform: translate3d("+ (event.clientX * 0.2) +"px, "+ (event.clientY * 0.01) +"px,0px);transition:0.5s all";
           imageschildren[6].element.style.cssText =
           "transform: translate3d("+ (event.clientX * 0.2) +"px, "+ (event.clientY * 0.01) +"px,0px);transition:0.5s all";
-      }
-      window.addEventListener('mousewheel', handle,false);
+      };
+      mainContainer.addEventListener('mousewheel', handle,false);
       window.addEventListener('mousemove', mouseposition,false);
