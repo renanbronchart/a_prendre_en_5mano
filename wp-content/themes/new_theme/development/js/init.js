@@ -28,3 +28,4 @@ $(document).on('ready', function() {
     init();
   })(mediaQueries);
 });
+
