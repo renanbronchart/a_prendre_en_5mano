@@ -18,17 +18,51 @@
     <!-- vendor script css -->
 </head>
 <body>
+<!-- debut nav -->
+<div class="navigation">
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Portfolio</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Join us</a>
+        </li>
+    </ul>
+</div>
+
+<!-- fin nav -->
 
 <div id="header-wrap">
     <div id="header" class="clear">
+
+        <div class="burger">
+        <div class="btn-navigation">
+            <div class="barre"></div>
+            <div class="barre"></div>
+            <div class="barre"></div>
+        </div>
+
+        <div id="close"></div>
+        </div>
+
         <nav>
             <img src="<?= get_stylesheet_directory_uri(); ?>/images/logo_ALEM.png" alt="" class="logo">
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'nav'
-                )); ?>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'nav'
+            )); ?>
         </nav>
     </div>
 </div>
+
     <div class='cb'></div>
             <div class='wrap'>
                 <div class='container'>
