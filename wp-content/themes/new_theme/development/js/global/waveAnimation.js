@@ -1,7 +1,8 @@
 (function() {
-  $(document).on('ready', function() {
+  $(document).ready(function() {
+      console.log(positionSection)
       var positionSection = ($('#participation_don').offset()).top;
-    $(document).on('scroll', function() {
+    $(window).on('scroll', function() {
       var windowScroll = $(window).scrollTop();
 
       if(windowScroll >= positionSection - 400) {
