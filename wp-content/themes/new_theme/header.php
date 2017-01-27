@@ -21,21 +21,16 @@
 <!-- debut nav -->
 <div class="navigation">
     <ul>
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#">Join us</a>
-        </li>
+        <?php
+        $loopContexte = new WP_Query( array( 'post_type' => 'menuNav', 'posts_per_page' => 10 ) );
+        while ( $loopContexte->have_posts() ) : $loopContexte->the_post();
+            ?>
+                <li>
+                    <a href="#<?php the_field('ancre-link')?>"><?php the_field('label-link')?></a>
+                </li>
+            <?php
+        endwhile;
+        ?>
     </ul>
 </div>
 
@@ -58,6 +53,18 @@
             <img src="<?= get_stylesheet_directory_uri(); ?>/images/logo_ALEM.png" alt="" class="logo">
             <div class="menu">
             <ul>
+                <?php
+                $loopContexte = new WP_Query( array( 'post_type' => 'menuNav', 'posts_per_page' => 10 ) );
+                while ( $loopContexte->have_posts() ) : $loopContexte->the_post();
+                    ?>
+                        <li>
+                            <a href="#<?php the_field('ancre-link')?>"><?php the_field('label-link')?></a>
+                        </li>
+                    <?php
+                endwhile;
+                ?>
+
+<!--
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -72,7 +79,7 @@
                 </li>
                 <li>
                     <a href="#">Join us</a>
-                </li>
+                </li> -->
             </ul></div>
         </nav>
     </div>

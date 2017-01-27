@@ -5,7 +5,7 @@
 
 
 
-<section class="actusContainer brown">
+<section id='actus' class="actusContainer brown">
   <div class="title-bloc">
     <h4 class='section__title'>NOS ACTUS</h4>
     <h3 class='section__subtitle'>LES DERNIERES NEWS</h3>

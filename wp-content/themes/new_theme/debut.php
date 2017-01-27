@@ -1,6 +1,7 @@
 
 <section id="home">
-  <div class="background">
+  <img src="wp-content/themes/new_theme/images/swipe.svg" alt="icon swipe" class='icon-scroll'>
+  <div class="background scroll-list">
       <div class="paysage" >
           <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/00-paysage.png" alt="">
       </div>
@@ -22,10 +23,17 @@
       <div class="fin">
           <img src="<?= get_stylesheet_directory_uri(); ?>/images/slider/fin.png" alt="">
       </div>
-      <p data-position='1'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p data-position='2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p data-position='3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p data-position='4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <?php
+      $loopContexte = new WP_Query( array( 'post_type' => 'textPresentation', 'posts_per_page' => 10 ) );
+      while ( $loopContexte->have_posts() ) : $loopContexte->the_post();
+          ?>
+            <p data-position='<?php the_field('position')?>'>
+              <?php the_field('text-explicatif') ?>
+            </p>
+          <?php
+      endwhile;
+      ?>
+
   </div>
 </section>
 

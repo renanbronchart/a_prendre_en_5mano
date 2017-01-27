@@ -1,4 +1,4 @@
-<section class='team' >
+<section class='team' id='team'>
   <?php
   $loopChiffre = new WP_Query( array( 'post_type' => 'title_team') );
   while ( $loopChiffre->have_posts() ) : $loopChiffre->the_post();

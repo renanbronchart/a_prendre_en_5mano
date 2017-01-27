@@ -1,6 +1,6 @@
     <footer class='footer'>
       <ul class="footer__shareLink">
-              <li><a href="facebook.com"><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></a></li>
+              <li><a href="http://facebook.com"><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></a></li>
               <li><a href="linkedin.com"><i class="fa fa-linkedin-square social-media" aria-hidden="true"></i></a></li>
               <li><a href="#"><i class="fa fa-pinterest-square social-media" aria-hidden="true"></i></a></li>
       </ul><ul class="footer__listLink">

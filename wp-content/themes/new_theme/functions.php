@@ -21,6 +21,51 @@ add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'team_member_profil', 120, 120, true);
 
+// Plugin menu
+add_action( 'init', 'menuNav' );
+
+function menuNav() {
+    register_post_type( 'menuNav',
+        array(
+            'labels' => array(
+                'name' => __( 'Menu Nav' ),
+                'singular_name' => __( 'menuNav' ),
+                'set_featured_image' => true
+            ),
+            'public' => true,
+            'capability_type' => 'post',
+            'supports' => array(
+                'title',
+                'editor',
+                'custom-field')
+        )
+    );
+}
+
+
+
+// Plugin text begin
+add_action( 'init', 'textPresentation' );
+
+function textPresentation() {
+    register_post_type( 'textPresentation',
+        array(
+            'labels' => array(
+                'name' => __( 'Text Presentation' ),
+                'singular_name' => __( 'textPresentation' ),
+                'set_featured_image' => true
+            ),
+            'public' => true,
+            'capability_type' => 'post',
+            'supports' => array(
+                'editor',
+                'custom-field')
+        )
+    );
+}
+
+
+
 // Plugin pout le contexte
 add_action( 'init', 'create_contexte_content' );
 
