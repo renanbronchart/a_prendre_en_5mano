@@ -10,8 +10,8 @@
     <h4 class='section__title'>NOS ACTUS</h4>
     <h3 class='section__subtitle'>LES DERNIERES NEWS</h3>
   </div>
-  <i class="fa fa-arrows-h" aria-hidden="true"></i>
-  <ul class="listActus">
+  <img src="wp-content/themes/new_theme/images/swipe.svg" alt="icon swipe" class='icon-scroll'>
+  <ul class="listActus scroll-list">
   <?php if(have_posts()): while(have_posts()): the_post(); ?>
       <li class="listActus__element">
         <div class='listActus__media'>

@@ -13,8 +13,8 @@
       <?php
   endwhile;
   ?>
-  <i class="fa fa-arrows-h" aria-hidden="true"></i>
-  <ul class='team__members'><?php
+  <img src="wp-content/themes/new_theme/images/swipe.svg" alt="icon swipe" class='icon-scroll'>
+  <ul class='team__members scroll-list'><?php
       $loop = new WP_Query( array( 'post_type' => 'team_member') );
       while ( $loop->have_posts() ) : $loop->the_post();
     ?><li class='team__member'>
