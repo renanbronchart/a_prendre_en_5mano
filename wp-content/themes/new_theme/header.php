@@ -56,9 +56,24 @@
 
         <nav>
             <img src="<?= get_stylesheet_directory_uri(); ?>/images/logo_ALEM.png" alt="" class="logo">
-            <?php wp_nav_menu(array(
-                'theme_location' => 'nav'
-            )); ?>
+            <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Join us</a>
+                </li>
+            </ul></div>
         </nav>
     </div>
 </div>
