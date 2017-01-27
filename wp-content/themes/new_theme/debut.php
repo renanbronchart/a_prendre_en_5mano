@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="<?php the_field('text-align'); ?>">
-                    <a href="#" class="button ghost">Faire un don</a>
+                    <a href="<?php the_field('link_button'); ?>" class="button ghost" target='_blank'><?php the_field('content_button'); ?></a>
                 </div>
             <?php
         endwhile;
