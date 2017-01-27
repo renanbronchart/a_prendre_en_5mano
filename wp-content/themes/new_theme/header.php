@@ -6,6 +6,7 @@
     <link rel='profile' href='http://gmpg.org/xfn/11' />
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Playfair+Display|Source+Sans+Pro" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='all' href="<?php bloginfo( 'stylesheet_directory' ); ?>/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='pingback' href='<?php bloginfo( 'pingback_url' ); ?>' />
 
     <!-- vendor script js -->

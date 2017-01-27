@@ -1,19 +1,31 @@
+// the !important is to put style on form wordpress
 .button
   background-color: $color-text-blue !important
-  border: 0 !important
+  border: 1px solid transparent !important
   color: #FCFCFC !important
   padding: 15px 20px
   text-transform: uppercase
   text-align: center
   font-family: $font-family-garamond
   font-size: 1rem
+  transition: 0.4s
+  &:hover
+    background-color: #fff !important
+    color: $color-text-blue !important
+    border: 1px solid #278589 !important
+    transition: 0.4s
 
   &.ghost
     background-color: transparent !important
-    border: 1px solid #278589 !important
     color: #278589 !important
+    border: 1px solid #278589 !important
     padding: 12px 30px
     text-align: center
     text-decoration: none
     display: inline-block
     font-size: 19px
+    transition: 0.4s
+    &:hover
+      background-color: #278589 !important
+      color: #fff !important
+      transition: 0.4s

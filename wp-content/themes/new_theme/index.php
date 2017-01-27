@@ -10,6 +10,7 @@
     <h4 class='section__title'>NOS ACTUS</h4>
     <h3 class='section__subtitle'>LES DERNIERES NEWS</h3>
   </div>
+  <i class="fa fa-arrows-h" aria-hidden="true"></i>
   <ul class="listActus">
   <?php if(have_posts()): while(have_posts()): the_post(); ?>
       <li class="listActus__element">
@@ -37,11 +38,26 @@
 </section>
 
 
+
 <section class='thanks white' >
-  <div class="title-bloc">
-    <h4 class='section__title'>NOS PARTENAIRES</h4>
-    <h3 class='section__subtitle'>Remerciements particuliers</h3>
-  </div>
+  <?php
+    $loop = new WP_Query( array( 'post_type' => 'blocPartner') );
+    $index = -1;
+    while ( $loop->have_posts() ) : $loop->the_post();
+  ?>
+    <div class="title-bloc">
+       <h4 class="section__title"><?php the_title(); ?></h4>
+       <h3 class='section__subtitle'>
+           <?php the_field('subtitle'); ?>
+       </h3>
+    </div>
+
+    <div class='description_content <?php the_field('text-align'); ?>'>
+        <?php the_content(); ?>
+    </div>
+  <?php
+    endwhile;
+  ?>
   <ul class='thanks__list'>
     <?php
       $loop = new WP_Query( array( 'post_type' => 'partners') );
@@ -64,16 +80,18 @@
 
 <section class='contactForm brown'>
   <div class="container">
+    <?php
+      $loop = new WP_Query( array( 'post_type' => 'contactForm') );
+      $index = -1;
+      while ( $loop->have_posts() ) : $loop->the_post(); $index++;
+    ?>
     <div class="title-bloc">
-      <h4 class='section__title'>NOS PARTENAIRES</h4>
-      <h3 class='section__subtitle'>Remerciements particuliers</h3>
+       <h4 class="section__title"><?php the_title(); ?></h4>
+       <h3 class='section__subtitle'>
+           <?php the_field('subtitle'); ?>
+       </h3>
     </div>
     <div class='contactForm__content'>
-      <?php
-        $loop = new WP_Query( array( 'post_type' => 'contactForm') );
-        $index = -1;
-        while ( $loop->have_posts() ) : $loop->the_post(); $index++;
-      ?>
 
         <?php echo do_shortcode("[huge_it_forms id='1']"); ?>
         <?php ?>

@@ -1,8 +1,19 @@
 <section class='team' >
-  <div class='title-bloc'>
-    <h4 class='section__title'>Notre equipe </h4>
-    <h3 class='section__subtitle'>Les visages derriere ce projet</h3>
-  </div>
+  <?php
+  $loopChiffre = new WP_Query( array( 'post_type' => 'title_team') );
+  while ( $loopChiffre->have_posts() ) : $loopChiffre->the_post();
+      ?>
+      <div class="title-bloc">
+          <h4 class="section__title"><?php the_title(); ?></h4>
+          <h3 class='section__subtitle'>
+              <?php the_field('subtitle'); ?>
+          </h3>
+      </div>
+
+      <?php
+  endwhile;
+  ?>
+  <i class="fa fa-arrows-h" aria-hidden="true"></i>
   <ul class='team__members'><?php
       $loop = new WP_Query( array( 'post_type' => 'team_member') );
       while ( $loop->have_posts() ) : $loop->the_post();

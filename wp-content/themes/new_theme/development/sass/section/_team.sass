@@ -1,8 +1,14 @@
+.team
+  position: relative
+  +medium
+    i.fa-arrows-h
+      display: none
+
 .team__members
   width: auto
   overflow-x: auto
   white-space: nowrap
-  padding: 20px 100px 40px 100px
+  padding: 0 40% 40px 40%
   +medium
     width: 100%
     overflow: auto
@@ -28,20 +34,6 @@
         opacity: 1
         transition: opacity 0.4s ease-in-out
 
-.team__details
-  white-space: normal
-  +medium
-    width: 100%
-    opacity: 0
-    transition: opacity 0.5s ease-in-out
-    position: absolute
-    background-color: rgba($color-text-blue, 0.9)
-    color: #ffffff
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    padding: 20px
 
 .team__memberPhoto
   text-align: center
@@ -56,16 +48,44 @@
     img
       width: 60%
 
-.team__memberName
-  color: #fff
-  margin: 20px 0 0 0
+.team__details
+  white-space: normal
+  +medium
+    width: 100%
+    opacity: 0
+    transition: opacity 0.5s ease-in-out
+    position: absolute
+    background-color: rgba($color-text-blue, 0.9)
+    color: #ffffff
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
 
+
+.team__memberName
+  margin: 20px 0 0 0
+  color: $color-text-blue
+  +medium
+    font-size: 1rem
+    color: #fff
+    margin: 0
+    padding: 10px
+  +large
+    font-size: 1.16rem
+    padding: 20px
 .team__memberDescription
   margin: 20px 0 0 0
   +medium
     position: absolute
     bottom: 0
     right: 0
+    padding: 10px
+    p
+      font-size: 0.8rem
+      color: #ffffff
+  +large
     padding: 20px
     p
-      color: #ffffff
+      font-size: 1rem
+
