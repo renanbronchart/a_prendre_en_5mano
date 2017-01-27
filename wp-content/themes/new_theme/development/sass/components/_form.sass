@@ -14,13 +14,11 @@
     +large
       padding: 0 80px
 
-
-  #hugeit-contact-wrapper_1
-    background: 0
   #hugeit-contact-wrapper_1 .hugeit-contact-column-block
     float: none !important
   #hugeit-contact-wrapper_1
     width: 100%
+    background: 0
     .field-block input,
     .field-block input:focus,
     .field-block textarea,
@@ -30,11 +28,13 @@
       border: none !important
       border-bottom: 1px solid #DDDDDD !important
       background: 0
-      font-size: 1rem
+      font-size: 0.8rem
       color: #646D6E !important
       padding: 0 0 10px 0 !important
       outline:0px !important
       -webkit-appearance:none
+      +medium
+        font-size: 1rem
   #hugeit-contact-wrapper_1
     .hugeit-field-block
       margin: 0 0 30px 0
@@ -42,8 +42,10 @@
         color: #BDBDBD
       &:nth-child(1),
       &:nth-child(2)
-        width: 49%
-        display: inline-block
+        width: 100%
+        +medium
+          width: 49%
+          display: inline-block
     .field-block.input-text-block,
     .field-block.textarea-block
       width: 100% !important
@@ -57,3 +59,5 @@
       letter-spacing: normal
       i
         display: none
+    .formsAboveAlign
+      display: none
